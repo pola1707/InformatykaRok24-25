@@ -1,0 +1,16 @@
+lista = []
+
+lista.append(1)
+lista.append(1.0)
+lista.append('1')
+lista.append('jedynka')
+lista.append([1, 111, 1111])
+print(lista)
+lista.append('Julek nie gadaj!')
+print(lista)
+lista.pop()
+print(lista)
+lista.pop(0)
+print(lista)
+lista.clear()
+print(lista)
