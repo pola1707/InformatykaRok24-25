@@ -1,3 +1,6 @@
+"""
+KOD NIE DZIALA - UZYWAC Zadanie3Proba2.py
+"""
 fib = [0, 1]
 a = 1
 b = 1
