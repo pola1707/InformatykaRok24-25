@@ -1,0 +1,42 @@
+h1{
+    background-color: pink;
+    color: white;
+    padding: 5px;
+    font-size: 30pt;
+    letter-spacing: 20px;
+    width: 95vw;
+    margin-left: 0fw;
+    text-shadow: 1px 1px white;
+    border-radius: 25px;
+}
+p{
+    color: pink;
+    padding: 5px;
+    font-size: 20pt;
+}
+body{
+    background-color: white;
+}
+a:link {
+    color: rgb(235, 153, 167);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: rgb(224, 178, 186);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: rgb(204, 0, 255);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: rgb(255, 0, 200);
+    background-color: transparent;
+    text-decoration: underline;
+  }
