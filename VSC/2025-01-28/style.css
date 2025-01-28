@@ -1,0 +1,92 @@
+body
+{
+    margin: 0px;
+}
+
+header
+{
+    background-color: rgb(136, 29, 163);
+    margin: 0px;
+}
+
+footer
+{
+    background-color: rgb(136, 29, 163);
+    color: rgb(255,255,255);
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+aside
+{
+    background-color: rgb(169, 57, 197);
+    width: 30vw;
+    height: 50vh;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255,255,255);
+    padding: 5px;
+}
+
+article
+{
+    background-color: rgb(109, 65, 143);
+    height: 50vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    padding: 5px;
+}
+
+h1
+{
+    color: rgb(255, 255, 255);
+    font-size: 22pt;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 5px 5px 5px grey;
+    margin: 0px;
+
+
+}
+a
+{
+    text-decoration: none;
+}
+a:link
+{
+    color: blue;
+}
+a:visited
+{
+    color:black;
+
+}
+a:hover
+{
+    color: blueviolet;
+}
+
+.moj_styl
+{
+    border-radius: 20px;
+    width:270px;
+    position: relative;
+    left: 70px;
+    top: 8px;
+    
+
+}
+
+table
+{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+td
+{
+    border: 2px solid black;
+}
