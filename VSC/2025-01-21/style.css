@@ -1,0 +1,23 @@
+h1
+{
+    background-color: rgb(227, 88, 88);
+    color: rgb(232, 239, 128);
+    text-align: center;
+    padding: 5px;
+    font-size: 30pt;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 5px;
+    width: 70vw;
+    margin-left: 15vw;
+    text-shadow: 5px 5px 5px rgb(grey);
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 20px;
+}
+
+.moj_styl
+{
+    width: 90%;
+    margin: 0px;
+
+}
