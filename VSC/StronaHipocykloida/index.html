@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hipocykloida</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <!-- Prism.js - Styl i skrypt do podświetlania kodu -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+
+</head>
+<body>
+    <header>
+        <h1 id="glowna">Hipocykloida</h1>
+        <nav>
+            <ul>
+                <li><a href="#glowna">Stronna Główna</a></li>
+                <li><a href="#section1">Hipocykloida</a></li>
+                <li><a href="#section2">Okrąg</a></li>
+                <li><a href="#section3">GeoGebra</a></li>
+                <li><a href="#section4">Spirograf</a></li>
+                <li><a href="#section5">OpenProcessing</a></li>
+                <li><a href="#section6">Python</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="slider">
+        <div class="slider-wrapper">
+            <div class="slide" id="slide1">
+                <img src="hypocycloid/hypocycloid1.png" alt="Zdjęcie 1">
+            </div>
+            <div class="slide" id="slide2">
+                <img src="hypocycloid/hypocycloid2.png" alt="Zdjęcie 2">
+            </div>
+            <div class="slide" id="slide3">
+                <img src="hypocycloid/hypocycloid3.png" alt="Zdjęcie 3">
+            </div>
+        </div>
+    </section>
+
+    <section id="section1">
+        <h2>Hipocykloida</h2>
+        <p>Hipocykloida to krzywa płaska, która tworzy punkt na obwodzie mniejszego okręgu toczącego się bez poślizgu wewnątrz większego okręgu</p>
+        <p>\[
+            \begin{aligned}
+            x(\theta) &= (R - r) \cos(\theta) + r \cos\left(\frac{R - r}{r} \theta\right) \\
+            y(\theta) &= (R - r) \sin(\theta) - r \sin\left(\frac{R - r}{r} \theta\right)
+            \end{aligned}
+            \]</p>
+    </section>
+
+    <section id="section2">
+        <h2>Okrąg</h2>
+        <p></p><iframe width="600" height="566" frameborder="0" scrolling="no" src="https://ulougedupl-my.sharepoint.com/personal/p_brejt_ulo_pozytywneinicjatywy_pl/_layouts/15/Doc.aspx?sourcedoc={12d73bab-eb5a-4ca0-ba58-2773b536842c}&action=embedview&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe></p>
+    </section>
+    <!-- Dzięki Maja -->
+    <section id="section3">
+        <h2>GeoGebra</h2>
+        <p><iframe src="https://www.geogebra.org/m/CcPYeyWA" width="800" height="600" style="border:0px;"></iframe></p>
+    </section>
+
+    <section id="section4">
+        <h2>Spirograf</h2>
+        <video width="800" height="600" controls>
+            <source src="hypocycloid/HipokloidaFilmik.mp4" type="video/mp4">
+            Twoja przeglądarka nie obsługuje tagu wideo.
+        </video>
+        <p>Inspiracja: <a href="https://inspiral-web.nathanfriend.com/">https://inspiral-web.nathanfriend.com/</a></p>
+
+    </section>
+
+    <section id="section5">
+        <h2>OpenProcessing</h2>
+        <p><iframe width="100%" height="500px" src="https://openprocessing.org/sketch/793462/embed/" frameborder="0"></iframe></p>
+    </section>
+
+    <section id="section6">
+        <h2>Python - Hipocykloida</h2>
+        <img src="hypocycloid/MPLfigura1.png" alt="Wykres hipocykloidy" width="600">
+        <pre><code class="language-python">
+    import numpy as np
+    import matplotlib.pyplot as plt
+    
+    # Parametry hipocykloidy
+    R = 5  # Promień dużego okręgu
+    r = 2  # Promień małego okręgu
+    d = 3  # Odległość punktu od środka małego okręgu
+    
+    # Kąty (pełny obrót dla hipocykloidy)
+    theta = np.linspace(0, 2 * np.pi * (R / np.gcd(R, r)), 1000)
+    
+    # Obliczanie współrzędnych
+    x = (R - r) * np.cos(theta) + d * np.cos((R - r) / r * theta)
+    y = (R - r) * np.sin(theta) - d * np.sin((R - r) / r * theta)
+    
+    # Tworzenie wykresu
+    plt.figure(figsize=(8, 8))
+    
+    # Kolorowanie linii – kolory zmieniają się wzdłuż wykresu
+    for i in range(len(theta) - 1):
+        plt.plot(x[i:i+2], y[i:i+2], color=plt.cm.rainbow(i / len(theta)), linewidth=2)
+    
+    plt.title('Kolorowa hipocykloida')
+    plt.axis('equal')
+    plt.grid(True)
+    plt.show()
+        </code></pre>
+    </section>
+    
+    
+    <footer>
+        <p>&copy; Pola Brejt</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

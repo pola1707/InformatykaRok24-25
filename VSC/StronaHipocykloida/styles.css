@@ -1,0 +1,96 @@
+/* Resetowanie stylów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Podstawowe style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Nagłówek */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0; /* Zapobiega zmianie rozmiaru slajdów */
+    display: none; /* Domyślnie ukrywamy wszystkie zdjęcia */
+}
+
+.slide.active {
+    display: block; /* Tylko aktywne zdjęcie będzie widoczne */
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* Sekcje */
+section {
+    padding: 40px;
+    text-align: center;
+    background-color: white;
+    margin: 20px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Stopka */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
